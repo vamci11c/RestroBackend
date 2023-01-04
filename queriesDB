@@ -1,0 +1,25 @@
+/*CREATE TABLE resto.tbl_users (
+    UserId int NOT NULL AUTO_INCREMENT,
+    FirstName varchar(255),
+    LastName varchar(255),    
+    Address varchar(255),
+    City varchar(255),   
+	EmailId nvarchar(50) not Null,
+    PhoneNumber nvarchar (15) not null,
+    AltPhone nvarchar (15) null,
+    UserName nvarchar(50) NOT NULL,
+	Password nvarchar(50) NOT NULL,
+    BillingPeriod nvarchar (50) null,  
+    BillingPrice int null,
+    Status bool NOT NULL default false,
+	Role nchar(10) NULL,
+	CreatedDate datetime NOT NULL,
+	CreatedBy nvarchar(50) NULL,
+    PRIMARY KEY (UserId)
+);*/
+-- ALTER TABLE resto.tbl_users AUTO_INCREMENT=1000
+insert into resto.tbl_users (lastname,firstname,address,city,emailId,phoneNumber,userName,password,createdDate) values
+ ('varma','test vamsi ','address test ','Vizag','email@gmail.com','1234567890','vamsiVal','password',CURRENT_DATE ())
+
+
+
