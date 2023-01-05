@@ -1,7 +1,23 @@
 import express, { Request, Response } from "express";
 import accountController from "../controller/accountController";
+import loginController from "../controller/loginController";
 import userRegisterController from "../controller/userRegisterController";
 const router = express.Router();
+
+router.get("/login", async function (req: Request, res: Response) {
+  const loginData = req.body;
+  loginController
+    .login(loginData)
+    .then((result) => {
+      res.status(200).send(result);
+    })
+    .catch((err) =>
+      res.status(404).json({
+        message: err.message,
+        err,
+      })
+    );
+});
 
 router.get("/account", async function (req: Request, res: Response) {
   const email = req.query.email;
