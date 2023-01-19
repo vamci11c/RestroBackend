@@ -1,7 +1,7 @@
 /*CREATE TABLE resto.tbl_users (
     UserId int NOT NULL AUTO_INCREMENT,
-    FirstName varchar(255),
-    LastName varchar(255),    
+    FirstName varchar(255) not null,
+    LastName varchar(255) not null,    
     Address varchar(255),
     City varchar(255),   
 	EmailId nvarchar(50) not Null,
@@ -13,13 +13,14 @@
     BillingPrice int null,
     Status bool NOT NULL default false,
 	Role nchar(10) NULL,
-	CreatedDate datetime NOT NULL,
+	CreatedDate TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
 	CreatedBy nvarchar(50) NULL,
-    PRIMARY KEY (UserId)
+    PRIMARY KEY (UserId),
+    CONSTRAINT UNIQUE (userName)
 );*/
 -- ALTER TABLE resto.tbl_users AUTO_INCREMENT=1000
-insert into resto.tbl_users (lastname,firstname,address,city,emailId,phoneNumber,userName,password,createdDate) values
- ('varma','test vamsi ','address test ','Vizag','email@gmail.com','1234567890','vamsiVal','password',CURRENT_DATE ())
+insert into resto.tbl_users (lastname,firstname,address,city,emailId,phoneNumber,userName,password) values
+ ('varma','test vamsi ','address test ','Vizag','email@gmail.com','1234567890','vamsiVal','password')
 
 
 

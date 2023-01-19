@@ -37,57 +37,45 @@ const Query = async (connection: mysql.Connection, query: string) =>
 
 const GetQuery = async (
   connection: mysql.Connection,
-
   query: string,
-
   values: Array<string | number>
 ) =>
   new Promise((resolve, reject) => {
     connection.query(query, values, (error, result) => {
       if (error) {
         reject(error);
-
         return;
       }
-
       resolve(result);
     });
   });
 
 const InsertQuery = async (
   connection: mysql.Connection,
-
   query: string,
-
   values: Array<string | number>
 ) =>
   new Promise((resolve, reject) => {
     connection.query(query, values, (error, result) => {
       if (error) {
         reject(error);
-
         return;
       }
-
       resolve(result);
     });
   });
 
 const UpdateQuery = async (
   connection: mysql.Connection,
-
   query: string,
-
   values: Array<string | number>
 ) =>
   new Promise((resolve, reject) => {
     connection.query(query, values, (error, result) => {
       if (error) {
         reject(error);
-
         return;
       }
-
       resolve(result);
     });
   });
