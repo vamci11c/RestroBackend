@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mySql_1 = require("../database/mySql");
+const data = [{ fName: "vamsi", lName: "varma", Mobile: "1234567890" }];
 const accountDataLayer = {
     getUserbyEmail(email) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -20,7 +21,7 @@ const accountDataLayer = {
             }
             return (0, mySql_1.Query)(conn, query)
                 .then((res) => {
-                return res;
+                return data;
             })
                 .catch((err) => {
                 return err;
